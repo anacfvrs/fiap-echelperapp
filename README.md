@@ -8,10 +8,12 @@ Projeto criado para entrega de trabalho da FIAP, Enterprise Challenge ano 2, sem
 
 ## Funcionalidades
 
-- **Registro e Login**: Usuárias podem criar novas contas e acessar a plataforma.
-- **Postagens**: Usuárias podem criar novos posts, visualizar posts existentes, e interagir através de comentários e respostas.
-- **Navegação**: Barra lateral fixa para facilitar a navegação entre posts, tags, e perfil pessoal.
-- **Responsividade**: Layout responsivo para uso em diferentes dispositivos.
+- **Página Inicial**: Apresentação do aplicativo.
+- **Onboarding**: Guias introdutórios para novos usuários.
+- **Autenticação**: Login, cadastro e login com redes sociais.
+- **Perfil**: Visualização e edição do perfil do usuário.
+- **FAQ**: Perguntas frequentes e links úteis.
+- **Postagens**: Criação e visualização de postagens, com categorias e descrições.
 
 ## Tecnologias Utilizadas
 
