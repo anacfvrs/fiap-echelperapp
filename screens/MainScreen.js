@@ -9,12 +9,20 @@ export default function MainScreen({ navigation }) {
       id: '1',
       name: 'Golanginya',
       time: '5 min atrás',
-      content: 'Casa de acolhimento',
+      content: 'Dúvida Jurídica - Situação de Vulnerabilidade',
       avatar: require('../assets/avatar.png'), 
-      tags: ['lar temporário', 'acolhimento', 'violência'],
+      tags: ['jurídico', 'divórcio', 'precisando de ajuda'],
     },
     {
       id: '2',
+      name: 'Maria Silva',
+      time: '6 min atrás',
+      content: 'Casa de acolhimento',
+      avatar: require('../assets/avatar3.png'), 
+      tags: ['lar temporário', 'acolhimento', 'violência'],
+    },
+    {
+      id: '3',
       name: 'Linuxoid',
       time: '25 min atrás',
       content: 'Fui assediada no ambiente de trabalho',
@@ -22,6 +30,31 @@ export default function MainScreen({ navigation }) {
       tags: ['trabalho', 'assédio'],
     },
   ]);
+
+  const renderItem = ({ item }) => (
+    <View style={styles.postCard}>
+      <View style={styles.postHeader}>
+        <Image source={item.avatar} style={styles.postAvatar} />
+        <View>
+          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+            <Text style={styles.postName}>{item.name}</Text>
+            {item.name === 'Maria Silva' && (
+              <Ionicons name="checkmark-circle" size={16} color="#4caf50" style={{ marginLeft: 5 }} />
+            )}
+          </View>
+          <Text style={styles.postTime}>{item.time}</Text>
+        </View>
+      </View>
+      <Text style={styles.postContent}>{item.content}</Text>
+      <View style={styles.postTags}>
+        {item.tags.map((tag, index) => (
+          <View key={index} style={styles.postTag}>
+            <Text>{tag}</Text>
+          </View>
+        ))}
+      </View>
+    </View>
+  );
 
   return (
     <View style={styles.container}>
@@ -36,25 +69,7 @@ export default function MainScreen({ navigation }) {
         <FlatList
           data={posts}
           keyExtractor={(item) => item.id}
-          renderItem={({ item }) => (
-            <View style={styles.postCard}>
-              <View style={styles.postHeader}>
-                <Image source={item.avatar} style={styles.postAvatar} />
-                <View>
-                  <Text style={styles.postName}>{item.name}</Text>
-                  <Text style={styles.postTime}>{item.time}</Text>
-                </View>
-              </View>
-              <Text style={styles.postContent}>{item.content}</Text>
-              <View style={styles.postTags}>
-                {item.tags.map((tag, index) => (
-                  <View key={index} style={styles.postTag}>
-                    <Text>{tag}</Text>
-                  </View>
-                ))}
-              </View>
-            </View>
-          )}
+          renderItem={renderItem}
         />
       </View>
       <TouchableOpacity style={styles.addPostButton} onPress={() => navigation.navigate('NewPost')}>
@@ -82,6 +97,7 @@ export default function MainScreen({ navigation }) {
     </View>
   );
 }
+
 
 
 
