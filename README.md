@@ -1,11 +1,23 @@
-# Sample Snack app
+# fiap-echelpherapp
 
-Open the `App.js` file to start writing some code. You can preview the changes directly on your phone or tablet by scanning the **QR code** or use the iOS or Android emulators. When you're done, click **Save** and share the link!
+# Enterprise Challenge - HelpHer App
 
-When you're ready to see everything that Expo provides (or if you want to use your own editor) you can **Download** your project and use it with [expo cli](https://docs.expo.dev/get-started/installation/#expo-cli)).
+## ![Logo](./assets/logo1.png)
 
-All projects created in Snack are publicly available, so you can easily share the link to this project via link, or embed it on a web page with the `<>` button.
+Projeto criado para entrega de trabalho da FIAP, Enterprise Challenge ano 2, semestre 2. HelpHer é uma plataforma criada com o propósito de promover acolhimento, aconselhamento e trocas entre e para mulheres em estado de vulnerabilidade social, reduzindo a desigualdade de gênero (baseado nos Objetivos de Desenvolvimento Sustentável da ONU 5 e 10).
 
-If you're having problems, you can tweet to us [@expo](https://twitter.com/expo) or ask in our [forums](https://forums.expo.dev/c/expo-dev-tools/61) or [Discord](https://chat.expo.dev/).
+## Funcionalidades
 
-Snack is Open Source. You can find the code on the [GitHub repo](https://github.com/expo/snack).
+- **Página Inicial**: Apresentação do aplicativo.
+- **Onboarding**: Guias introdutórios para novos usuários.
+- **Autenticação**: Login, cadastro e login com redes sociais.
+- **Perfil**: Visualização e edição do perfil do usuário.
+- **FAQ**: Perguntas frequentes e links úteis.
+- **Postagens**: Criação e visualização de postagens, com categorias e descrições.
+
+## Tecnologias Utilizadas
+
+- **React Native:** Framework para construção de interfaces nativas para dispositivos móveis.
+- **Expo:** Ferramentas e serviços para desenvolvimento e visualização de aplicativos React Native.
+- **React Navigation:** Biblioteca para navegação em aplicativos React Native.
+- **Expo Vector Icons:** Biblioteca de ícones.
